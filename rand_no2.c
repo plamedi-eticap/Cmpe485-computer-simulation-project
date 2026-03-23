@@ -15,8 +15,8 @@ int main() {
     int bins1[10] = {0};
     double rn;
     char line[100];
-    fgets(line, 100, fp); // Skip header
-    fgets(line, 100, fp); // Skip date
+    fgets(line, 100, fp); 
+    fgets(line, 100, fp); 
     
     int count = 0;
     while(fscanf(fp, "%lf", &rn) == 1) {
