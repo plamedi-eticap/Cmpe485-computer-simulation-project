@@ -5,7 +5,7 @@
 int main() {
     printf("=== 3.1(2) READING RN-file.txt ===\n");
     
-    // 3.1(2) Read RN-file.txt → 10 bins
+   
     FILE *fp = fopen("RN-file.txt", "r");
     if(!fp) {
         printf("ERROR: RN-file.txt missing! Run rand_no.c first.\n");
@@ -34,7 +34,7 @@ int main() {
         printf(" %d  %.1f-%.1f  %4d\n", i+1, i*0.1, (i+1)*0.1, bins1[i]);
     }
     
-    // 3.2 Repeat for 10K RNs
+   
     printf("\n=== 3.2 10K RNs ===\n");
     srand(time(NULL));
     FILE *fp10k = fopen("RN-file-10000.txt", "w");
@@ -56,7 +56,7 @@ int main() {
         printf(" %d  %.1f-%.1f  %4d\n", i+1, i*0.1, (i+1)*0.1, bins2[i]);
     }
     
-    // 3.3 Chi-square test
+    
     double chi2 = 0;
     for(int i = 0; i < 10; i++) {
         double diff = bins2[i] - 1000.0;
